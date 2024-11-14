@@ -1,0 +1,1 @@
+Analytics is free to get started and provides a free tier for up to 50,000 monthly active users (MAU). Above this free tier, you must upgrade your plan for UGS as a whole to continue using Analytics. For more information, refer to our billing page.
