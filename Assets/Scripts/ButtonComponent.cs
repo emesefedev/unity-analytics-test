@@ -1,5 +1,3 @@
-using Unity.Services.Analytics;
-using Unity.Services.Core;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -14,18 +12,8 @@ public class ButtonComponent : MonoBehaviour
         button.onClick.AddListener(() =>
         {
             Debug.Log($"Button {id} clicked");
-            
-            ButtonClickedEvent buttonClicked = new ButtonClickedEvent
-            {
-                ButtonId = id
-            };
-            AnalyticsService.Instance.RecordEvent(buttonClicked);
-            
+            AnalyticsManager.Instance.ButtonClicked(id);
         });
     }
 
-    private void Start()
-    {
-        UnityServices.InitializeAsync();
-    }
 }
